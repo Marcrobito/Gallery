@@ -22,7 +22,6 @@ class DetailFragment : Fragment() {
 
         arguments?.let{
             val detail =   it.getParcelable<DetailParcelable>("detail")
-            Log.d("TAG", detail.toString())
             with(binding){
                 author.text = detail?.user
                 Glide.with(this@DetailFragment).load(detail?.largeImageURL).into(imageView)
